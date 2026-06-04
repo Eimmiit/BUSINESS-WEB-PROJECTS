@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoshGlow Skincare - Curating Scented Experiences</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/output.css">
+
+</head>
+
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-crimson selection:text-white">
+
+  <div
+    class="bg-brand-crimson text-white text-[10px] tracking-widest uppercase py-2 px-4 text-center overflow-hidden whitespace-nowrap">
+    <div class="inline-block animate-marquee">
+      Multi Award winning London trained certified skincare therapist
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-crimson/5"
+    x-data="{ mobileMenu: false }">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <!-- logo -->
+        <img src="./images/Poshglow-skincare-logo.webp" class="invert w-auto h-7" alt="PoshGlow Skincare Logo">
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest font-medium text-brand-dark/80">
+        <a href="#" class="group relative hover:text-brand-crimson transition">Shop
+          <span
+            class="absolute left-0 bottom-0 h-[1px] w-0 bg-brand-crimson transition-all duration-200 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="group relative hover:text-brand-crimson transition">Collections
+          <span
+            class="absolute left-0 bottom-0 h-[1px] w-0 bg-brand-crimson transition-all duration-200 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="group relative hover:text-brand-crimson transition">About Us
+          <span
+            class="absolute left-0 bottom-0 h-[1px] w-0 bg-brand-crimson transition-all duration-200 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="group relative hover:text-brand-crimson transition">Journal
+          <span
+            class="absolute left-0 bottom-0 h-[1px] w-0 bg-brand-crimson transition-all duration-200 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="group relative hover:text-brand-crimson transition">Contact
+          <span
+            class="absolute left-0 bottom-0 h-[1px] w-0 bg-brand-crimson transition-all duration-200 group-hover:w-full"></span>
+        </a>
+        <a href="#" class="group relative hover:text-brand-crimson transition">Find Your Routine
+          <span
+            class="absolute left-0 bottom-0 h-[1px] w-0 bg-brand-crimson transition-all duration-200 group-hover:w-full"></span>
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-4 text-brand-dark">
+        <button class="p-2 hover:text-brand-crimson transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+        <button class="p-2 hover:text-brand-crimson transition relative">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span
+            class="absolute top-1 right-1 bg-brand-crimson text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+        <button @click="mobileMenu = !mobileMenu" class="lg:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div x-show="mobileMenu" x-transition
+      class="lg:hidden fixed inset-0 bg-brand-cream z-50 pl-5 pr-5 pt-3 flex flex-col justify-between">
+      <div>
+        <div class="flex justify-between items-center mb-12">
+          <img src="./images/Poshglow-skincare-logo.webp" class="invert w-auto h-7" alt="PoshGlow Skincare Logo">
+          <button @click="mobileMenu = false" class="p-2"><svg class="w-6 h-6 " fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg></button>
+        </div>
+        <nav class="flex flex-col gap-6 text-lg font-serif">
+          <a href="#">Shop</a><a href="#">Collection</a><a href="#">About us</a><a href="#">Journal</a><a
+            href="#">Contact</a><a href="#">Find Your Routine</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- hero section -->
+  <section
+    class="relative h-[85vh] rounded-2xl m-1 md:m-5  flex items-center justify-center bg-brand-dark overflow-hidden animate-fade-up">
+    <div class="absolute inset-0">
+      <video id="heroVideo" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="./videos/poshglow-hero-video2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/20 via-brand-dark/60 to-brand-dark/90"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-6 text-white">
+      <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-light tracking-wide leading-tight mb-6">
+        Glow with Confidence
+      </h1>
+      <p class="max-w-xl mx-auto text-sm md:text-base text-gray-300 font-light leading-relaxed mb-10 tracking-wide">
+        Luxury skincare formulated
+        for healthy radiant skin.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#"
+          class="w-full sm:w-auto px-8 py-3.5 border border-white text-xs uppercase tracking-widest font-medium hover:bg-white hover:text-brand-dark transition-all duration-300">
+          Discover Your Routine
+        </a>
+        <a href="#"
+          class="w-full sm:w-auto px-8 py-3.5 bg-brand-crimson text-xs uppercase tracking-widest font-medium hover:bg-brand-crimson/80 transition-all duration-300">
+          Shop Our Collection
+        </a>
+      </div>
+      <div class="mt-10 flex flex-wrap justify-center gap-6 text-xs uppercase tracking-widest text-gray-300">
+        <span>★★★★★ 4.9 Rating</span>
+        <span>Premium Ingredients</span>
+        <span>Trusted by Thousands</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="overflow-hidden py-2 bg-brand-crimson text-white">
+    <div class="marquee whitespace-nowrap">
+      <span>
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+        GLOW ◆ HYDRATE ◆ NOURISH ◆ RADIATE ◆ REPEAT ◆
+
+      </span>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs uppercase tracking-widest text-brand-crimson font-semibold block">Who We Are</span>
+          <h2 class="font-serif text-3xl md:text-5xl font-light tracking-wide text-brand-dark">
+            Helping you glow with confidence
+          </h2>
+        </div>
+        <p class="max-w-md text-gray-600 font-light leading-relaxed text-sm">
+          At Poshglow, we believe skincare should be simple, effective, and empowering. Our carefully curated products
+          are designed to support healthy, radiant skin while turning everyday routines into moments of self-care and
+          confidence.
+        </p>
+        <a href="#"
+          class="inline-block px-6 py-3 bg-brand-crimson text-white text-xs uppercase tracking-widest font-medium hover:bg-brand-crimson/90 transition">
+          Our Story
+        </a>
+
+        <div class="relative pt-8 hidden sm:block">
+          <div class="absolute -left-4 -top-4 w-40 h-40 bg-brand-crimson/5 -z-10"></div>
+          <img src="images/poshglow-2ndsec2" alt="Scent experience close up"
+            class="w-3/4 object-cover h-64 border border-brand-crimson/10">
+          <div
+            class="absolute bottom-4 right-0 bg-brand-crimson text-white p-6 max-w-[240px] text-xs font-light leading-relaxed">
+            "Healthy skin begins with consistent care, thoughtful ingredients, and confidence in every step of your
+            routine."
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="lg:col-span-7 h-full min-h-[500px] bg-gray-100 relative group overflow-hidden border border-brand-crimson/5">
+        <img src="images/poshglow-2ndsec1" alt="Luxury Bar Showroom"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="bg-white py-24 border-y border-brand-crimson/5" x-data="{ activeSlide: 0 }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <h2 class="font-serif text-3xl md:text-5xl font-light tracking-wide text-brand-dark">Explore Our Collection</h2>
+          <p class="text-gray-500 font-light text-xs md:text-sm mt-2">Every skin shade has its own love language. Discover formulas crafted to nourish, protect, and reveal your natural glow.</p>
+        </div>
+        <div class="flex gap-2">
+          <button @click="activeSlide = Math.max(0, activeSlide - 1)"
+            class="p-3 border border-brand-dark/20 rounded-full hover:bg-brand-cream transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button @click="activeSlide = Math.min(2, activeSlide + 1)"
+            class="p-3 border border-brand-dark/20 rounded-full hover:bg-brand-cream transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="relative group h-[420px] overflow-hidden bg-brand-dark">
+          <img src="images/poshglow-product1"
+            class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span
+              class="bg-white/95 text-brand-dark px-4 py-2 text-[11px] font-medium tracking-widest uppercase block text-center backdrop-blur shadow-sm">
+              Snow White face soap
+            </span>
+          </div>
+        </div>
+
+        <div class="relative group h-[420px] overflow-hidden bg-brand-dark">
+          <img src="images/poshglow-product2"
+            class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span
+              class="bg-white/95 text-brand-dark px-4 py-2 text-[11px] font-medium tracking-widest uppercase block text-center backdrop-blur shadow-sm">
+              Hot chocolate cream
+            </span>
+          </div>
+        </div>
+
+        <div class="relative group h-[420px] overflow-hidden bg-brand-dark">
+          <img src="images/poshglow-product3"
+            class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span
+              class="bg-white/95 text-brand-dark px-4 py-2 text-[11px] font-medium tracking-widest uppercase block text-center backdrop-blur shadow-sm">
+              Whitening face soap
+            </span>
+          </div>
+        </div>
+
+        <div class="relative group h-[420px] overflow-hidden bg-brand-dark">
+          <img src="images/poshglow-product4"
+            class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span
+              class="bg-white/95 text-brand-dark px-4 py-2 text-[11px] font-medium tracking-widest uppercase block text-center backdrop-blur shadow-sm">
+              Kiddy shower gel
+            </span>
+          </div>
+        </div>
+
+        <div class="relative group h-[420px] overflow-hidden bg-brand-dark">
+          <img src="images/poshglow-product5"
+            class="w-full h-full object-cover opacity-85 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span
+              class="bg-white/95 text-brand-dark px-4 py-2 text-[11px] font-medium tracking-widest uppercase block text-center backdrop-blur shadow-sm">
+              Hips and butt enlargement
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="bg-white py-24 border-y border-brand-crimson/5 rounded-2xl m-5" x-data="{
+    activeSlide: 0,
+    products: [
+      {
+        name: 'Snow White Face Soap',
+        image: 'images/poshglow-product1',
+        description: 'A cleansing soap formulated to help maintain healthy-looking, radiant skin.'
+      },
+      {
+        name: 'Hot Chocolate Cream',
+        image: 'images/poshglow-product2',
+        description: 'A rich moisturizing cream designed to nourish and soften the skin.'
+      },
+      {
+        name: 'Whitening Face Soap',
+        image: 'images/poshglow-product3',
+        description: 'A refreshing cleanser crafted for daily skincare routines.'
+      },
+      {
+        name: 'Kiddy Shower Gel',
+        image: 'images/poshglow-product4',
+        description: 'A gentle shower gel suitable for everyday family use.'
+      },
+      {
+        name: 'Body Care Collection',
+        image: 'images/poshglow-product5',
+        description: 'Designed to support smooth, hydrated, and healthy-looking skin.'
+      }
+    ]
+  }">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Top Section -->
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
+        <div>
+          <span class="text-xs uppercase tracking-[0.3em] text-brand-crimson font-medium">
+            Featured Collection
+          </span>
+          <h2 class="font-serif text-4xl md:text-5xl font-light mt-4 text-brand-dark">
+            Curated For Every Skin Journey
+          </h2>
+          <p class="text-gray-500 max-w-lg mt-4 leading-relaxed text-sm">
+            Every skin tells a different story. Explore products thoughtfully designed
+            to support your skincare journey and reveal your natural glow.
+          </p>
+        </div>
+        <div class="flex items-center gap-6">
+          <!-- Counter -->
+          <div class="text-sm tracking-[0.25em] text-gray-400">
+            <span x-text="String(activeSlide + 1).padStart(2,'0')"></span>
+            /
+            <span x-text="String(products.length).padStart(2,'0')"></span>
+          </div>
+          <!-- Arrows -->
+          <div class="flex gap-3">
+            <!-- Previous -->
+            <button @click="activeSlide = (activeSlide - 1 + products.length) % products.length"
+              class="group w-12 h-12 rounded-full border border-brand-dark/10 flex items-center justify-center hover:bg-brand-crimson hover:border-brand-crimson transition-all duration-300">
+              <svg class="w-4 h-4 group-hover:text-white transition" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            <!-- Next -->
+            <button @click="activeSlide = (activeSlide + 1) % products.length"
+              class="group w-12 h-12 rounded-full border border-brand-dark/10 flex items-center justify-center hover:bg-brand-crimson hover:border-brand-crimson transition-all duration-300">
+              <svg class="w-4 h-4 group-hover:text-white transition" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Slider Content -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Image -->
+        <div class="relative overflow-hidden">
+          <template x-for="(product, index) in products" :key="index">
+            <div x-show="activeSlide === index" x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+              x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0">
+              <img :src="product.image" :alt="product.name"
+                class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+          </template>
+        </div>
+        <!-- Content -->
+        <div>
+          <span class="text-xs uppercase tracking-[0.3em] text-brand-crimson">
+            Collection
+          </span>
+          <h3 x-text="products[activeSlide].name"
+            class="font-serif text-3xl md:text-5xl font-light mt-4 mb-6 text-brand-dark"></h3>
+          <p x-text="products[activeSlide].description" class="text-gray-600 leading-relaxed max-w-md mb-10"></p>
+
+          <a href="#"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-brand-crimson text-white uppercase tracking-[0.2em] text-xs hover:bg-brand-dark transition">
+            Explore Product
+          </a>
+        </div>
+
+      </div>
+      <!-- Progress Bar -->
+      <div class="mt-12">
+        <div class="h-[2px] bg-gray-200">
+          <div class="h-full bg-brand-crimson transition-all duration-700"
+            :style="`width:${((activeSlide + 1) / products.length) * 100}%`"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 py-24 animate-fade-up">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border border-brand-crimson/10 p-8 lg:p-12 bg-white">
+      <div class="aspect-video bg-brand-dark relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-tr from-blue-950/40 via-transparent to-transparent z-10"></div>
+        <video id="heroVideo" autoplay muted loop playsinline
+          class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40">
+          <source src="./videos/poshglow-hero-video1.mp4" type="video/mp4">
+        </video>
+        <div class="z-20 text-center">
+          <span class="text-xs font-serif uppercase tracking-[0.3em] text-brand-gold block mb-2">Rooted In Confidence.
+            Powered By</span>
+          <h3 class="font-serif text-3xl text-white">CARE</h3>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <h3 class="font-serif text-3xl md:text-4xl font-light text-brand-dark">Our Philosophy.</h3>
+        <p class="text-gray-600 font-light text-sm leading-relaxed">
+          At Poshglow, skincare is more than a routine—it is a daily act of confidence and self-care. We create
+          thoughtfully formulated products designed to support healthy-looking skin while celebrating the beauty of
+          individuality. Every formula reflects our commitment to quality, safety, and radiant results.
+        </p>
+        <a href="#"
+          class="inline-block px-8 py-3.5 bg-brand-crimson text-white text-xs uppercase tracking-widest font-medium hover:bg-brand-crimson/90 transition">
+          Discover our story
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 pb-24">
+    <div class="h-64 bg-gray-200"><img
+        src="images/beautiful-lady1"
+        class="w-full h-full object-cover"></div>
+    <div class="h-64 bg-gray-200"><img
+        src="images/beautiful-lady2"
+        class="w-full h-full object-cover"></div>
+    <div class="h-64 bg-gray-200"><img
+        src="images/poshglow-product6"
+        class="w-full h-full object-cover"></div>
+    <div class="h-64 bg-gray-200"><img
+        src="images/poshglow-product7"
+        class="w-full h-full object-cover"></div>
+  </section>
+
+  <footer class="bg-gradient-to-b from-brand-dark to-black text-white">
+
+  <!-- CTA Section -->
+  <div class="max-w-7xl mx-auto px-6 pt-24 pb-20 text-center border-b border-white/10">
+
+    <span class="text-xs uppercase tracking-[0.35em] text-brand-gold">
+      PoshGlow Skincare
+    </span>
+
+    <h2 class="font-serif text-4xl md:text-6xl font-light mt-6 mb-6">
+      Begin Your Glow Journey
+    </h2>
+
+    <p class="max-w-2xl mx-auto text-gray-400 leading-relaxed">
+      Discover skincare thoughtfully designed to support healthy-looking skin,
+      inspire confidence, and elevate your daily self-care ritual.
+    </p>
+
+    <a href="#"
+      class="inline-block mt-10 px-8 py-4 bg-brand-crimson text-white text-xs uppercase tracking-[0.25em] hover:bg-white hover:text-brand-dark transition-all duration-300">
+      Explore Collection
+    </a>
+
+  </div>
+
+  <!-- Footer Content -->
+  <div class="max-w-7xl mx-auto px-6 py-20">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+
+      <!-- Brand -->
+      <div>
+
+        <img
+          src="./images/Poshglow-skincare-logo.webp"
+          alt="PoshGlow Skincare"
+          class="h-12 mb-6 brightness-0 invert"
+        >
+
+        <p class="text-sm text-gray-400 leading-relaxed max-w-xs">
+          Let your skin do the talking. Thoughtfully formulated skincare
+          products designed to support healthy-looking skin while encouraging
+          confidence, self-care, and everyday radiance.
+        </p>
+
+        <div class="flex gap-4 mt-8">
+
+          <a href="#" class="text-gray-400 hover:text-brand-gold transition">
+            Instagram
+          </a>
+
+          <a href="#" class="text-gray-400 hover:text-brand-gold transition">
+            Facebook
+          </a>
+
+          <a href="#" class="text-gray-400 hover:text-brand-gold transition">
+            TikTok
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Explore -->
+      <div>
+
+        <h4 class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-6">
+          Explore
+        </h4>
+
+        <ul class="space-y-4 text-sm text-gray-400">
+
+          <li>
+            <a href="#" class="hover:text-white transition">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-white transition">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-white transition">
+              Featured Collection
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-white transition">
+              Our Philosophy
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hover:text-white transition">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- Contact -->
+      <div>
+
+        <h4 class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-6">
+          Contact
+        </h4>
+
+        <div class="space-y-4 text-sm text-gray-400">
+
+          <p>
+            +234 903 457 5228
+          </p>
+
+          <p>
+            info@poshglowskincare.com
+          </p>
+
+          <p class="leading-relaxed">
+            11 Ogundana Street,<br>
+            Allen Avenue,<br>
+            Ikeja, Lagos, Nigeria
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+
+        <h4 class="text-xs uppercase tracking-[0.3em] text-brand-gold mb-6">
+          Stay Connected
+        </h4>
+
+        <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+          Subscribe to receive skincare updates, product launches,
+          beauty tips, and exclusive offers.
+        </p>
+
+        <form class="space-y-3">
+
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="w-full bg-white/5 border border-white/10 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-crimson transition"
+          >
+
+          <button
+            class="w-full bg-brand-crimson py-3 text-xs uppercase tracking-[0.25em] hover:bg-white hover:text-brand-dark transition-all duration-300"
+          >
+            Subscribe
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <!-- Trust Indicators -->
+
+    <div class="mt-20 pt-10 border-t border-white/10">
+
+      <div class="flex flex-wrap justify-center gap-8 text-xs uppercase tracking-[0.25em] text-gray-500">
+
+        <span>Founded 2017</span>
+
+        <span>NAFDAC Approved</span>
+
+        <span>Made For Every Skin Tone</span>
+
+        <span>Nature-Powered Formulas</span>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+
+    <div
+      class="mt-10 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500"
+    >
+
+      <p>
+        © 2026 PoshGlow Skincare. Crafted with care for radiant skin and confident living.
+      </p>
+
+      <div class="flex gap-6">
+
+        <a href="#" class="hover:text-white transition">
+          Privacy Policy
+        </a>
+
+        <a href="#" class="hover:text-white transition">
+          Terms & Conditions
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+  <div class="fixed bottom-6 left-6 z-50">
+    <a href="https://wa.me/+2348142436068" target="_blank"
+      class="bg-[#25D366] text-white px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 text-xs font-medium tracking-wide hover:scale-105 transition duration-300">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.847.001-2.633-1.025-5.107-2.892-6.976C16.457 1.813 13.99 .788 11.354.788c-5.443 0-9.866 4.417-9.869 9.851-.001 1.701.453 3.361 1.316 4.8l-.427 1.564 1.597-.419z" />
+      </svg>
+      Chat with us
+    </a>
+  </div>
+
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
