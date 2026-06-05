@@ -20,18 +20,24 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
         // SCROLLED STATE: Inject glassmorphic styling cards safely
         navbar.classList.add(
-            "bg-white/30",
-            "backdrop-blur-md",
+            "bg-white/20",
+            "backdrop-blur-xl",
+            "backdrop-saturate-150",
             "border",
-            "border-white/20",
+            "border-white/40",
+            "shadow-lg",
+            "rounded-[25px]"
         );
     } else {
         // TOP OF PAGE STATE: Clean out scrolled styles cleanly
         navbar.classList.remove(
-            "bg-white/30",
-            "backdrop-blur-md",
+            "bg-white/20",
+            "backdrop-blur-xl",
+            "backdrop-saturate-150",
             "border",
-            "border-white/20",
+            "border-white/40",
+            "shadow-lg",
+            "rounded-[25px]"
         );
     }
 });
