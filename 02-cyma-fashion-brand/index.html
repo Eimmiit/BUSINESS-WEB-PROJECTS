@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cider - Vacation Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/output.css">
 
 </head>
+
 <body class="bg-cider-cream text-cider-dark font-sans antialiased">
-
-    <!-- 1. Top Global Promo Ticker -->
-    <div class="bg-cider-dark text-white text-[11px] font-medium tracking-wider py-2 px-4 text-center flex items-center justify-center gap-6 overflow-hidden">
-        <span>⚡️ FREE SHIPPING ON ORDERS OVER $39</span>
-        <span class="hidden md:inline text-cider-teal">•</span>
-        <span class="hidden md:inline">DOWNLOAD THE APP FOR 20% OFF YOUR FIRST ORDER</span>
-    </div>
-
-    <!-- 2. Sticky Header / Navigation Bar -->
     <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm" x-data="{ mobileMenu: false }">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
             <!-- Mobile Menu Toggle -->
             <button @click="mobileMenu = !mobileMenu" class="lg:hidden p-2 text-cider-dark">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
             </button>
 
             <!-- Navigation Links (Left Side) -->
@@ -43,21 +40,38 @@
 
             <!-- Profile & Utility Icons (Right Side) -->
             <div class="flex items-center gap-3 text-cider-dark">
-                <button class="p-2 hover:opacity-70"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></button>
-                <button class="p-2 hover:opacity-70"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></button>
+                <button class="p-2 hover:opacity-70"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg></button>
+                <button class="p-2 hover:opacity-70"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg></button>
                 <button class="p-2 hover:opacity-70 relative">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    <span class="absolute top-1 right-1 bg-cider-dark text-white text-[9px] w-3.5 h-3.5 rounded-full flex items-center justify-center font-bold">3</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span
+                        class="absolute top-1 right-1 bg-cider-dark text-white text-[9px] w-3.5 h-3.5 rounded-full flex items-center justify-center font-bold">3</span>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Drawer Navigation Overlay -->
-        <div x-show="mobileMenu" x-cloak class="lg:hidden fixed inset-0 bg-white z-50 p-6 flex flex-col justify-between">
+        <div x-show="mobileMenu" x-cloak
+            class="lg:hidden fixed inset-0 bg-white z-50 p-6 flex flex-col justify-between">
             <div>
                 <div class="flex justify-between items-center mb-8">
                     <span class="font-serif text-2xl font-bold uppercase">Cider</span>
-                    <button @click="mobileMenu = false" class="p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+                    <button @click="mobileMenu = false" class="p-2"><svg class="w-6 h-6" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg></button>
                 </div>
                 <nav class="flex flex-col gap-5 text-md font-bold tracking-wide uppercase">
                     <a href="#">New In</a><a href="#">Clothing</a><a href="#">Dresses</a><a href="#">Sale</a>
@@ -67,10 +81,13 @@
     </header>
 
     <!-- 3. Dynamic Flash Sale / Discount Billboard Banner -->
-    <section class="bg-gradient-to-r from-cider-teal/40 via-teal-100 to-cider-teal/40 py-6 text-center border-b border-teal-200/30">
+    <section
+        class="bg-gradient-to-r from-cider-teal/40 via-teal-100 to-cider-teal/40 py-6 text-center border-b border-teal-200/30">
         <div class="max-w-4xl mx-auto px-4" x-data="{ timer: 3600 * 3 }">
-            <h2 class="font-serif text-3xl md:text-5xl font-bold italic text-slate-800 tracking-tight">Up To 70% Off</h2>
-            <p class="text-[11px] md:text-xs uppercase font-semibold tracking-widest mt-1 text-slate-700">Limited Flash Campaign Ends In:</p>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold italic text-slate-800 tracking-tight">Up To 70% Off
+            </h2>
+            <p class="text-[11px] md:text-xs uppercase font-semibold tracking-widest mt-1 text-slate-700">Limited Flash
+                Campaign Ends In:</p>
             <!-- Basic Dynamic Countdown Element -->
             <div class="flex justify-center gap-3 mt-2 text-sm font-mono font-bold text-cider-accentRed">
                 <span class="bg-white/80 px-2 py-0.5 rounded shadow-sm">02h</span>:
@@ -81,15 +98,20 @@
     </section>
 
     <!-- 4. Hero Section: Vacation Shop (High-Impact Display) -->
-    <section class="relative bg-stone-100 h-[65vh] md:h-[80vh] flex flex-col justify-end items-center pb-12 overflow-hidden">
+    <section
+        class="relative bg-stone-100 h-[65vh] md:h-[80vh] flex flex-col justify-end items-center pb-12 overflow-hidden">
         <!-- Structural Placeholder Image Wrapper simulating pool landscape -->
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1400" alt="Vacation Backdrop" class="absolute inset-0 w-full h-full object-cover">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1400"
+            alt="Vacation Backdrop" class="absolute inset-0 w-full h-full object-cover">
         <!-- Central Featured Styling Asset Model Overlap Simulation -->
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-        
+        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/40 via-transparent to-transparent">
+        </div>
+
         <div class="relative z-10 text-center text-white px-4">
-            <h1 class="font-script text-5xl md:text-8xl text-yellow-200 drop-shadow-md select-none transform -rotate-2">Vacation Shop</h1>
-            <a href="#" class="mt-4 inline-block bg-white text-cider-dark font-bold text-xs uppercase tracking-widest px-8 py-3 rounded-full hover:bg-cider-dark hover:text-white transition shadow-lg">
+            <h1 class="font-script text-5xl md:text-8xl text-yellow-200 drop-shadow-md select-none transform -rotate-2">
+                Vacation Shop</h1>
+            <a href="#"
+                class="mt-4 inline-block bg-white text-cider-dark font-bold text-xs uppercase tracking-widest px-8 py-3 rounded-full hover:bg-cider-dark hover:text-white transition shadow-lg">
                 Shop Now
             </a>
         </div>
@@ -99,15 +121,21 @@
     <section class="grid grid-cols-1 md:grid-cols-2 gap-2 p-2">
         <!-- Left Side Lookbook Portrait -->
         <div class="relative h-[600px] bg-amber-50 overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800" alt="Model Portrait Denim" class="w-full h-full object-cover group-hover:scale-102 transition duration-700">
-            <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wide">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800"
+                alt="Model Portrait Denim"
+                class="w-full h-full object-cover group-hover:scale-102 transition duration-700">
+            <div
+                class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wide">
                 Summer Linen Sets →
             </div>
         </div>
         <!-- Right Side Lookbook Portrait -->
         <div class="relative h-[600px] bg-orange-50 overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800" alt="Model Portrait Yellow Dress" class="w-full h-full object-cover group-hover:scale-102 transition duration-700">
-            <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wide">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800"
+                alt="Model Portrait Yellow Dress"
+                class="w-full h-full object-cover group-hover:scale-102 transition duration-700">
+            <div
+                class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wide">
                 Sun-Drenched Palettes →
             </div>
         </div>
@@ -116,11 +144,15 @@
     <!-- 6. Full Width Highlight Lookbook banner -->
     <section class="p-2 pt-0">
         <div class="relative h-[550px] bg-stone-200 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=1200" alt="Studio Lookbook White Ensemble" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=1200"
+                alt="Studio Lookbook White Ensemble" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/10"></div>
             <div class="absolute bottom-12 right-12 text-right">
-                <span class="text-white font-serif italic text-3xl block mb-2 drop-shadow-sm">The Minimalist Dream</span>
-                <a href="#" class="bg-white text-cider-dark px-6 py-2.5 text-xs font-bold uppercase tracking-wider rounded-md hover:bg-black hover:text-white transition">Explore Dresses</a>
+                <span class="text-white font-serif italic text-3xl block mb-2 drop-shadow-sm">The Minimalist
+                    Dream</span>
+                <a href="#"
+                    class="bg-white text-cider-dark px-6 py-2.5 text-xs font-bold uppercase tracking-wider rounded-md hover:bg-black hover:text-white transition">Explore
+                    Dresses</a>
             </div>
         </div>
     </section>
@@ -129,29 +161,43 @@
     <section class="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 pt-0">
         <!-- Box 1: Clothing/New In Label Overlay -->
         <div class="relative h-[500px] bg-neutral-100 flex items-center justify-center overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&q=80&w=700" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&q=80&w=700"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
-            <h3 class="relative z-10 text-white font-serif text-3xl font-bold tracking-widest uppercase border-b-2 border-white pb-1">New In</h3>
+            <h3
+                class="relative z-10 text-white font-serif text-3xl font-bold tracking-widest uppercase border-b-2 border-white pb-1">
+                New In</h3>
         </div>
         <!-- Box 2: Bags & Footwear Category Label Overlay -->
         <div class="relative h-[500px] bg-neutral-200 flex items-center justify-center overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=700" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=700"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
-            <h3 class="relative z-10 text-white font-serif text-3xl font-bold tracking-widest uppercase border-b-2 border-white pb-1">Shoes & Bags</h3>
+            <h3
+                class="relative z-10 text-white font-serif text-3xl font-bold tracking-widest uppercase border-b-2 border-white pb-1">
+                Shoes & Bags</h3>
         </div>
     </section>
 
     <!-- 8. Editorial Creative Block: Summer Favorites Layout Banner -->
     <section class="my-16 max-w-7xl mx-auto px-4">
-        <div class="bg-cider-sand rounded-3xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-orange-200/20 shadow-sm">
+        <div
+            class="bg-cider-sand rounded-3xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-orange-200/20 shadow-sm">
             <div class="md:col-span-5 space-y-4">
-                <h2 class="font-serif text-4xl md:text-6xl font-bold text-cider-accentRed tracking-tight">Sümmer <br><span class="font-script text-cider-dark tracking-wide normal-case text-4xl md:text-5xl block -mt-1 pl-4">Favorites</span></h2>
-                <p class="text-xs text-stone-600 max-w-xs font-medium leading-relaxed">Handpicked pieces chosen by our design laboratory to transition seamlessly from poolside mornings to seaside dinners.</p>
-                <a href="#" class="inline-block border-b-2 border-cider-dark text-xs font-bold uppercase tracking-wider pb-0.5 hover:text-cider-accentRed hover:border-cider-accentRed transition">Discover Selection</a>
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-cider-accentRed tracking-tight">Sümmer
+                    <br><span
+                        class="font-script text-cider-dark tracking-wide normal-case text-4xl md:text-5xl block -mt-1 pl-4">Favorites</span>
+                </h2>
+                <p class="text-xs text-stone-600 max-w-xs font-medium leading-relaxed">Handpicked pieces chosen by our
+                    design laboratory to transition seamlessly from poolside mornings to seaside dinners.</p>
+                <a href="#"
+                    class="inline-block border-b-2 border-cider-dark text-xs font-bold uppercase tracking-wider pb-0.5 hover:text-cider-accentRed hover:border-cider-accentRed transition">Discover
+                    Selection</a>
             </div>
             <!-- Flat-lay Image Container -->
             <div class="md:col-span-7 rounded-2xl overflow-hidden shadow-md bg-white">
-                <img src="https://images.unsplash.com/photo-1506152983158-b4a74a01c721?auto=format&fit=crop&q=80&w=800" alt="Summer essentials flatlay" class="w-full h-64 md:h-80 object-cover">
+                <img src="https://images.unsplash.com/photo-1506152983158-b4a74a01c721?auto=format&fit=crop&q=80&w=800"
+                    alt="Summer essentials flatlay" class="w-full h-64 md:h-80 object-cover">
             </div>
         </div>
     </section>
@@ -160,36 +206,47 @@
     <section class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto px-4 mb-16">
         <div class="space-y-3">
             <div class="h-96 bg-stone-50 rounded-2xl overflow-hidden border border-gray-100">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=600"
+                    class="w-full h-full object-cover">
             </div>
             <span class="text-xs font-bold tracking-wider uppercase block">Fine Jewelry Accents</span>
         </div>
         <div class="space-y-3">
             <div class="h-96 bg-stone-50 rounded-2xl overflow-hidden border border-gray-100">
-                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&q=80&w=600"
+                    class="w-full h-full object-cover">
             </div>
             <span class="text-xs font-bold tracking-wider uppercase block">Woven Basket Totes</span>
         </div>
     </section>
 
     <!-- 10. Editorial Concept Lookbook: Pied à Terre Accent Row -->
-    <section class="w-full bg-stone-900 text-white mb-16 relative overflow-hidden h-[500px] flex items-center justify-center">
-        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200" alt="Coastal Roadscape" class="absolute inset-0 w-full h-full object-cover opacity-60">
+    <section
+        class="w-full bg-stone-900 text-white mb-16 relative overflow-hidden h-[500px] flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200"
+            alt="Coastal Roadscape" class="absolute inset-0 w-full h-full object-cover opacity-60">
         <div class="absolute inset-0 bg-gradient-to-r from-stone-950/80 via-transparent to-stone-950/80"></div>
-        
+
         <div class="relative z-10 text-center space-y-4 px-4 max-w-xl">
             <h2 class="font-serif italic text-4xl md:text-6xl text-amber-100 drop-shadow">Pied à Terre</h2>
-            <p class="text-xs uppercase tracking-widest font-semibold text-stone-200">Mediterranean Riviera Collections</p>
+            <p class="text-xs uppercase tracking-widest font-semibold text-stone-200">Mediterranean Riviera Collections
+            </p>
             <div class="pt-2">
-                <a href="#" class="bg-white text-stone-900 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-amber-100 transition shadow">Explore Capsule</a>
+                <a href="#"
+                    class="bg-white text-stone-900 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-amber-100 transition shadow">Explore
+                    Capsule</a>
             </div>
         </div>
     </section>
 
     <!-- 11. Lifestyle Closeups Snapshot Grid -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto px-4 mb-24">
-        <div class="h-[500px] bg-neutral-100 rounded-xl overflow-hidden"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover"></div>
-        <div class="h-[500px] bg-neutral-100 rounded-xl overflow-hidden"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover"></div>
+        <div class="h-[500px] bg-neutral-100 rounded-xl overflow-hidden"><img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=600"
+                class="w-full h-full object-cover"></div>
+        <div class="h-[500px] bg-neutral-100 rounded-xl overflow-hidden"><img
+                src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=600"
+                class="w-full h-full object-cover"></div>
     </section>
 
     <!-- 12. E-Commerce Structured Footer -->
@@ -223,15 +280,19 @@
             </div>
             <div class="col-span-2 space-y-4">
                 <h4 class="text-xs font-bold uppercase tracking-widest">Join the Cider Club</h4>
-                <p class="text-xs text-stone-500 leading-relaxed">Subscribe to get early campaign drops, limited vouchers, and style updates delivered straight to your inbox.</p>
+                <p class="text-xs text-stone-500 leading-relaxed">Subscribe to get early campaign drops, limited
+                    vouchers, and style updates delivered straight to your inbox.</p>
                 <form class="flex gap-2 max-w-sm">
-                    <input type="email" placeholder="Your email address" class="w-full bg-stone-50 border border-stone-200 px-4 py-2 text-xs focus:outline-none focus:border-cider-dark rounded">
-                    <button class="bg-cider-dark text-white font-bold uppercase tracking-wider text-[11px] px-4 py-2 hover:bg-stone-800 transition rounded">Join</button>
+                    <input type="email" placeholder="Your email address"
+                        class="w-full bg-stone-50 border border-stone-200 px-4 py-2 text-xs focus:outline-none focus:border-cider-dark rounded">
+                    <button
+                        class="bg-cider-dark text-white font-bold uppercase tracking-wider text-[11px] px-4 py-2 hover:bg-stone-800 transition rounded">Join</button>
                 </form>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+        <div
+            class="max-w-7xl mx-auto px-4 pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-stone-400">
             <p>© 2026 Cider. All Rights Reserved.</p>
             <div class="flex gap-4 text-[14px]">
                 <span class="grayscale opacity-60">Visa</span>
@@ -243,4 +304,5 @@
     </footer>
 
 </body>
+
 </html>
