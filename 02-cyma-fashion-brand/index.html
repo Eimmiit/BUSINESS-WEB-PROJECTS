@@ -15,94 +15,77 @@
 </head>
 
 <body class="bg-cider-cream text-cider-dark font-sans antialiased">
-    <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm" x-data="{ mobileMenu: false }">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <div class="bg-brand-greendeep text-white text-center py-2 text-[11px] tracking-[0.2em] uppercase">
+        Bridal • Bespoke • Traditional Fashion
+    </div>
+    <header id="navbar"
+    class="sticky top-4 mx-auto max-w-6xl md:max-w-4xl left-4 right-4 z-50 transition-all duration-500 ease-in-out">
+    <!-- Main Bar Container (Unified limits to prevent inner overflow layout breaking) -->
+    <div class="h-16 flex items-center justify-between relative px-6">
+
+        <!-- Left Section: Mobile Toggle (Shows < lg) & Desktop Nav Links (Shows >= lg) -->
+        <div class="flex items-center">
             <!-- Mobile Menu Toggle -->
-            <button @click="mobileMenu = !mobileMenu" class="lg:hidden p-2 text-cider-dark">
+            <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-brand-greendeep focus:outline-none" aria-label="Open Menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
 
-            <!-- Navigation Links (Left Side) -->
-            <nav class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider">
-                <a href="#" class="text-cider-accentRed hover:opacity-80">Sale</a>
-                <a href="#" class="hover:underline underline-offset-4">New In</a>
-                <a href="#" class="hover:underline underline-offset-4">Clothing</a>
-                <a href="#" class="hover:underline underline-offset-4">Dresses</a>
-                <a href="#" class="hover:underline underline-offset-4">Trending</a>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-[0.2em] font-inter">
+                <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">Home</a>
+                <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">Collections</a>
+                <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">Bridal</a>
+                <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">About</a>
+                <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">Contact</a>
             </nav>
+        </div>
 
-            <!-- Core Brand Logo -->
-            <div class="absolute left-1/2 -translate-x-1/2 text-center">
-                <a href="#" class="font-serif text-2xl lg:text-3xl font-bold tracking-tighter uppercase">Cider</a>
-            </div>
+        <!-- Right Section: Utility CTA Action Button -->
+        <div class="flex items-center gap-3">
+            <a href="#" class="px-4 py-2 md:px-5 md:py-2.5 border border-brand-golddeep text-brand-golddeep text-[10px] md:text-xs uppercase tracking-widest font-medium whitespace-nowrap transition-colors duration-200 hover:bg-brand-golddeep hover:text-white">
+                Book Consultation
+            </a>
+        </div>
+    </div>
+</header>
 
-            <!-- Profile & Utility Icons (Right Side) -->
-            <div class="flex items-center gap-3 text-cider-dark">
-                <button class="p-2 hover:opacity-70"><svg class="w-5 h-5" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg></button>
-                <button class="p-2 hover:opacity-70"><svg class="w-5 h-5" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg></button>
-                <button class="p-2 hover:opacity-70 relative">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+    <!-- Mobile Drawer Navigation Overlay (Moved outside header boundary to fill full browser window cleanly) -->
+    <div id="mobileMenu"
+        class="lg:hidden fixed inset-0 bg-brand-greendeep text-white z-[100] p-6 flex flex-col justify-between transform transition-transform duration-500 ease-in-out translate-x-full">
+        <div>
+            <div class="flex justify-between items-center mb-8">
+                <!-- Brand Mark Title (Fixed text contrast layout to white) -->
+                <h1 class="font-clashmedium text-white text-2xl tracking-wide">
+                    <a href="#">CYMA</a>
+                </h1>
+                <!-- Close Drawer Button -->
+                <button onclick="toggleMobileMenu()" class="p-2 text-white focus:outline-none" aria-label="Close Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    <span
-                        class="absolute top-1 right-1 bg-cider-dark text-white text-[9px] w-3.5 h-3.5 rounded-full flex items-center justify-center font-bold">3</span>
                 </button>
             </div>
+            <!-- Drawer Links (Fixed contrast: converted text color to white) -->
+            <nav class="flex flex-col gap-6 text-base font-inter tracking-widest uppercase">
+                <a href="#" class="hover:text-brand-golddeep transition-colors">Home</a>
+                <a href="#" class="hover:text-brand-golddeep transition-colors">Collections</a>
+                <a href="#" class="hover:text-brand-golddeep transition-colors">Bridal</a>
+                <a href="#" class="hover:text-brand-golddeep transition-colors">About</a>
+                <a href="#" class="hover:text-brand-golddeep transition-colors">Contacts</a>
+            </nav>
         </div>
-
-        <!-- Mobile Drawer Navigation Overlay -->
-        <div x-show="mobileMenu" x-cloak
-            class="lg:hidden fixed inset-0 bg-white z-50 p-6 flex flex-col justify-between">
-            <div>
-                <div class="flex justify-between items-center mb-8">
-                    <span class="font-serif text-2xl font-bold uppercase">Cider</span>
-                    <button @click="mobileMenu = false" class="p-2"><svg class="w-6 h-6" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg></button>
-                </div>
-                <nav class="flex flex-col gap-5 text-md font-bold tracking-wide uppercase">
-                    <a href="#">New In</a><a href="#">Clothing</a><a href="#">Dresses</a><a href="#">Sale</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- 3. Dynamic Flash Sale / Discount Billboard Banner -->
-    <section
-        class="bg-gradient-to-r from-cider-teal/40 via-teal-100 to-cider-teal/40 py-6 text-center border-b border-teal-200/30">
-        <div class="max-w-4xl mx-auto px-4" x-data="{ timer: 3600 * 3 }">
-            <h2 class="font-serif text-3xl md:text-5xl font-bold italic text-slate-800 tracking-tight">Up To 70% Off
-            </h2>
-            <p class="text-[11px] md:text-xs uppercase font-semibold tracking-widest mt-1 text-slate-700">Limited Flash
-                Campaign Ends In:</p>
-            <!-- Basic Dynamic Countdown Element -->
-            <div class="flex justify-center gap-3 mt-2 text-sm font-mono font-bold text-cider-accentRed">
-                <span class="bg-white/80 px-2 py-0.5 rounded shadow-sm">02h</span>:
-                <span class="bg-white/80 px-2 py-0.5 rounded shadow-sm">44m</span>:
-                <span class="bg-white/80 px-2 py-0.5 rounded shadow-sm">12s</span>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- 4. Hero Section: Vacation Shop (High-Impact Display) -->
     <section
         class="relative bg-stone-100 h-[65vh] md:h-[80vh] flex flex-col justify-end items-center pb-12 overflow-hidden">
         <!-- Structural Placeholder Image Wrapper simulating pool landscape -->
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1400"
-            alt="Vacation Backdrop" class="absolute inset-0 w-full h-full object-cover">
+        <video id="heroVideo" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+            <source src="./videos/.mp4" type="video/mp4">
+        </video>
         <!-- Central Featured Styling Asset Model Overlap Simulation -->
         <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/40 via-transparent to-transparent">
         </div>
@@ -303,6 +286,8 @@
         </div>
     </footer>
 
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
