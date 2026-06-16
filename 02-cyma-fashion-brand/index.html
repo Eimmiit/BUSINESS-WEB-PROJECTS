@@ -4,289 +4,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cider - Vacation Shop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <title>Wanni Fuga | Luxury Fashion</title>
     <link rel="stylesheet" href="./styles/output.css">
 
 </head>
 
-<body class="bg-cider-cream text-cider-dark font-sans antialiased">
-    <div class="bg-brand-greendeep text-white text-center py-2 text-[11px] tracking-[0.2em] uppercase">
-        Bridal • Bespoke • Traditional Fashion
-    </div>
-    <header id="navbar"
-        class="sticky top-4 z-50 mx-4 max-w-sm sm:mx-auto md:max-w-xl lg:max-w-6xl transition-all duration-500 ease-in-out">
-        <div class="h-20 flex items-center justify-between relative px-2">
-            <div class="flex items-center">
-                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-brand-greendeep focus:outline-none"
-                    aria-label="Open Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+<body class="bg-brand-bg text-brand-dark font-sans antialiased selection:bg-brand-gold selection:text-white">
 
-                <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-[0.2em] font-inter">
-                    <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">Home</a>
-                    <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">Collections</a>
-                    <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">Bridal</a>
-                    <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">About</a>
-                    <a href="#" class="hover:underline underline-offset-4 text-brand-greendeep">Contact</a>
-                </nav>
+    <div class="bg-brand-dark text-white text-[10px] tracking-[0.2em] uppercase py-2.5 text-center px-4 font-light">
+        Complimentary worldwide shipping on orders over $500
+    </div>
+
+    <header class="sticky top-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <button class="lg:hidden text-brand-dark focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <nav
+                class="hidden lg:flex items-center space-x-8 text-xs tracking-[0.15em] uppercase font-medium text-brand-dark/80">
+                <a href="#" class="hover:text-brand-gold transition-colors duration-300">Shop</a>
+                <a href="#" class="hover:text-brand-gold transition-colors duration-300">Collections</a>
+                <a href="#" class="hover:text-brand-gold transition-colors duration-300">Our Story</a>
+            </nav>
+
+            <div class="text-center">
+                <a href="#"
+                    class="font-serif text-xl sm:text-2xl lg:text-3xl tracking-[0.25em] uppercase font-bold text-brand-dark">
+                    WANNI FUGA
+                </a>
             </div>
 
-            <!-- Right Section: Utility CTA Action Button -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center space-x-3 sm:space-x-6 text-xs tracking-[0.15em] uppercase font-medium">
                 <a href="#"
-                    class="px-4 py-2 md:px-5 md:py-2.5 border border-brand-greendeep text-brand-greendeep text-[10px] md:text-xs uppercase tracking-widest font-medium whitespace-nowrap transition-colors duration-200 hover:bg-brand-greendeep hover:text-white">
-                    Book Consultation
+                    class="hidden md:inline-block hover:text-brand-gold transition-colors duration-300">Search</a>
+                <a href="#"
+                    class="hidden md:inline-block hover:text-brand-gold transition-colors duration-300">Account</a>
+                <a href="#" class="relative p-2 hover:text-brand-gold transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span
+                        class="absolute top-0 right-0 bg-brand-gold text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center scale-90">0</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Drawer Navigation Overlay (Moved outside header boundary to fill full browser window cleanly) -->
-    <div id="mobileMenu"
-        class="lg:hidden fixed inset-0 bg-brand-greendeep text-white z-[100] p-6 flex flex-col justify-between transform transition-transform duration-500 ease-in-out translate-x-full">
-        <div>
-            <div class="flex justify-between items-center mb-8">
-                <!-- Brand Mark Title (Fixed text contrast layout to white) -->
-                <h1 class="font-clashmedium text-white text-2xl tracking-wide">
-                    <a href="#">CYMA</a>
-                </h1>
-                <!-- Close Drawer Button -->
-                <button onclick="toggleMobileMenu()" class="p-2 text-white focus:outline-none" aria-label="Close Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+    <section class="relative w-full overflow-hidden bg-brand-dark">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:h-[75vh]">
+            <div class="relative h-[45vh] md:h-auto overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=80"
+                    alt="Wanni Fuga Luxury Editorial Close up"
+                    class="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>
-            <!-- Drawer Links (Fixed contrast: converted text color to white) -->
-            <nav class="flex flex-col gap-6 text-base font-inter tracking-widest uppercase">
-                <a href="#" class="hover:text-brand-golddeep transition-colors">Home</a>
-                <a href="#" class="hover:text-brand-golddeep transition-colors">Collections</a>
-                <a href="#" class="hover:text-brand-golddeep transition-colors">Bridal</a>
-                <a href="#" class="hover:text-brand-golddeep transition-colors">About</a>
-                <a href="#" class="hover:text-brand-golddeep transition-colors">Contacts</a>
-            </nav>
+            <div
+                class="relative h-[45vh] md:h-auto overflow-hidden group border-t md:border-t-0 md:border-l border-brand-dark">
+                <img src="https://images.unsplash.com/photo-1549064482-6779ba329226?auto=format&fit=crop&w=1000&q=80"
+                    alt="Wanni Fuga Textured Silk Fabric Detail"
+                    class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+            </div>
         </div>
-    </div>
+        <div class="bg-brand-bg py-12 px-6 text-center border-b border-gray-100">
+            <p
+                class="max-w-2xl mx-auto text-xs sm:text-sm tracking-[0.15em] leading-relaxed text-brand-muted font-light uppercase">
+                A refined fusion of bespoke African heritage and contemporary silhouettes designed for the global modern
+                woman.
+            </p>
+        </div>
+    </section>
 
-
-    <!-- 4. Hero Section: Vacation Shop (High-Impact Display) -->
-    <section
-        class="relative bg-stone-100 h-[65vh] md:h-[80vh] flex flex-col justify-end items-center pb-12 overflow-hidden">
-        <!-- Structural Placeholder Image Wrapper simulating pool landscape -->
-        <video id="heroVideo" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-            <source src="./videos/hero-image.mp4" type="video/mp4">
-        </video>
-        <!-- Central Featured Styling Asset Model Overlap Simulation -->
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/40 via-transparent to-transparent">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-2xl sm:text-3xl tracking-[0.2em] uppercase font-light">The New Era</h2>
+            <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-3"></div>
         </div>
 
-        <div class="relative z-10 text-center text-white px-4">
-            <h1 class="font-script text-5xl md:text-8xl text-yellow-200 drop-shadow-md select-none transform -rotate-2">
-                Vacation Shop</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+
+            <div class="group flex flex-col justify-between">
+                <div class="relative overflow-hidden aspect-[3/4] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80"
+                        alt="Lace Statement Set"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                    <span
+                        class="absolute top-3 left-3 bg-white text-brand-dark text-[9px] tracking-widest uppercase px-2.5 py-1 font-medium">Bestseller</span>
+                </div>
+                <div class="text-center">
+                    <h3
+                        class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark group-hover:text-brand-gold transition-colors">
+                        Amina Velvet Lace Set</h3>
+                    <p class="text-xs text-brand-muted mt-1.5 font-light">₦245,000 / $310</p>
+                </div>
+            </div>
+
+            <div class="group flex flex-col justify-between">
+                <div class="relative overflow-hidden aspect-[3/4] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
+                        alt="Organza Silhouette Gown"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="text-center">
+                    <h3
+                        class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark group-hover:text-brand-gold transition-colors">
+                        Zaria Structured Gown</h3>
+                    <p class="text-xs text-brand-muted mt-1.5 font-light">₦310,000 / $395</p>
+                </div>
+            </div>
+
+            <div class="group flex flex-col justify-between">
+                <div class="relative overflow-hidden aspect-[3/4] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80"
+                        alt="Metallic Pleated Dress"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="text-center">
+                    <h3
+                        class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark group-hover:text-brand-gold transition-colors">
+                        Tiwa Silk Kaftan</h3>
+                    <p class="text-xs text-brand-muted mt-1.5 font-light">₦185,000 / $235</p>
+                </div>
+            </div>
+
+            <div class="group flex flex-col justify-between">
+                <div class="relative overflow-hidden aspect-[3/4] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80"
+                        alt="Classic Royal Purple Set"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="text-center">
+                    <h3
+                        class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark group-hover:text-brand-gold transition-colors">
+                        Kimi Purple Draped Maxi</h3>
+                    <p class="text-xs text-brand-muted mt-1.5 font-light">₦220,000 / $280</p>
+                </div>
+            </div>
+
+            <div class="group flex flex-col justify-between">
+                <div class="relative overflow-hidden aspect-[3/4] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"
+                        alt="Sheer Evening Black Blouse"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="text-center">
+                    <h3
+                        class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark group-hover:text-brand-gold transition-colors">
+                        Noir Renaissance Bodysuit</h3>
+                    <p class="text-xs text-brand-muted mt-1.5 font-light">₦140,000 / $180</p>
+                </div>
+            </div>
+
+            <div class="group flex flex-col justify-between">
+                <div class="relative overflow-hidden aspect-[3/4] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80"
+                        alt="Signature Emerald Pleated Set"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="text-center">
+                    <h3
+                        class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark group-hover:text-brand-gold transition-colors">
+                        Jade Pleated Monostrap</h3>
+                    <p class="text-xs text-brand-muted mt-1.5 font-light">₦195,000 / $250</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-16">
             <a href="#"
-                class="mt-4 inline-block bg-white text-cider-dark font-bold text-xs uppercase tracking-widest px-8 py-3 rounded-full hover:bg-cider-dark hover:text-white transition shadow-lg">
-                Shop Now
+                class="inline-block border border-brand-dark text-[11px] tracking-[0.25em] uppercase font-medium px-10 py-4 hover:bg-brand-dark hover:text-white transition-all duration-300">
+                Discover All Collections
+            </a>
+        </div>
+    </main>
+
+    <section class="relative w-full h-[60vh] bg-neutral-900 group overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1800&q=80"
+            alt="Wanni Fuga Resort Lookbook Backdrop"
+            class="w-full h-full object-cover opacity-80 transition-transform duration-[2000ms] group-hover:scale-105">
+        <div class="absolute inset-0 bg-brand-dark/20 flex flex-col justify-center items-center text-center p-6">
+            <span class="text-white text-[10px] tracking-[0.4em] uppercase mb-3 font-medium">Resort & Swim 2026</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white tracking-[0.15em] font-light mb-6">The Earth
+                Collection</h2>
+            <a href="#"
+                class="bg-white text-brand-dark text-[11px] tracking-[0.2em] uppercase font-medium px-8 py-3.5 hover:bg-brand-gold hover:text-white transition-all duration-300">
+                Explore Lookbook
             </a>
         </div>
     </section>
 
-    <!-- 5. Editorial Multi-Column Grid Segment -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-2 p-2">
-        <!-- Left Side Lookbook Portrait -->
-        <div class="relative h-[600px] bg-amber-50 overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800"
-                alt="Model Portrait Denim"
-                class="w-full h-full object-cover group-hover:scale-102 transition duration-700">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="group cursor-pointer">
+                <div class="relative overflow-hidden aspect-[4/5] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
+                        alt="Resort Kaftans"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-center px-1">
+                    <h3 class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark">Luxury Loungewear</h3>
+                    <span
+                        class="text-xs text-brand-gold font-light group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative overflow-hidden aspect-[4/5] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80"
+                        alt="Premium Swimsuits"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-center px-1">
+                    <h3 class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark">Resort Swim</h3>
+                    <span
+                        class="text-xs text-brand-gold font-light group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="relative overflow-hidden aspect-[4/5] bg-neutral-100 mb-4">
+                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80"
+                        alt="Accents & Turbans"
+                        class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-center px-1">
+                    <h3 class="text-xs tracking-[0.15em] uppercase font-medium text-brand-dark">Signature Headpieces
+                    </h3>
+                    <span
+                        class="text-xs text-brand-gold font-light group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="border-t border-b border-gray-100 bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+            <div class="space-y-2">
+                <h4 class="text-xs tracking-[0.2em] uppercase font-semibold text-brand-dark">Worldwide Atelier Delivery
+                </h4>
+                <p class="text-xs text-brand-muted max-w-sm mx-auto font-light leading-relaxed">Premium fully insured
+                    global shipping via DHL Express directly to your doorstep.</p>
+            </div>
+            <div class="space-y-2">
+                <h4 class="text-xs tracking-[0.2em] uppercase font-semibold text-brand-dark">Bespoke Fitting Services
+                </h4>
+                <p class="text-xs text-brand-muted max-w-sm mx-auto font-light leading-relaxed">Schedule private digital
+                    consultations or showroom fittings tailored to your exact measurements.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-neutral-100 pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+
+                <div class="md:col-span-2 space-y-6">
+                    <h3 class="font-serif text-lg tracking-[0.2em] uppercase font-bold text-brand-dark">WANNI FUGA</h3>
+                    <p class="text-xs text-brand-muted font-light max-w-sm leading-relaxed">
+                        Redefining dynamic sophistication through rich cultural narratives and elevated craft standards
+                        since 2014.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-xs text-brand-muted hover:text-brand-gold hover:border-brand-gold transition-colors">IG</a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-xs text-brand-muted hover:text-brand-gold hover:border-brand-gold transition-colors">FB</a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-xs text-brand-muted hover:text-brand-gold hover:border-brand-gold transition-colors">PIN</a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-brand-dark">Client Services</h4>
+                    <ul class="space-y-2.5 text-xs text-brand-muted font-light">
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Contact Atelier</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Shipping & Customs</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Returns & Alterations</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Size Dimension Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-xs tracking-[0.2em] uppercase font-medium text-brand-dark">The Company</h4>
+                    <ul class="space-y-2.5 text-xs text-brand-muted font-light">
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Our Design Narrative</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Sustainability Commitments</a>
+                        </li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Showroom Boutiques</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <div
-                class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wide">
-                Summer Linen Sets →
-            </div>
-        </div>
-        <!-- Right Side Lookbook Portrait -->
-        <div class="relative h-[600px] bg-orange-50 overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800"
-                alt="Model Portrait Yellow Dress"
-                class="w-full h-full object-cover group-hover:scale-102 transition duration-700">
-            <div
-                class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wide">
-                Sun-Drenched Palettes →
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Full Width Highlight Lookbook banner -->
-    <section class="p-2 pt-0">
-        <div class="relative h-[550px] bg-stone-200 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&q=80&w=1200"
-                alt="Studio Lookbook White Ensemble" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/10"></div>
-            <div class="absolute bottom-12 right-12 text-right">
-                <span class="text-white font-serif italic text-3xl block mb-2 drop-shadow-sm">The Minimalist
-                    Dream</span>
-                <a href="#"
-                    class="bg-white text-cider-dark px-6 py-2.5 text-xs font-bold uppercase tracking-wider rounded-md hover:bg-black hover:text-white transition">Explore
-                    Dresses</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. Split Category Grid (New In vs Accessories Overlay) -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 pt-0">
-        <!-- Box 1: Clothing/New In Label Overlay -->
-        <div class="relative h-[500px] bg-neutral-100 flex items-center justify-center overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&q=80&w=700"
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
-            <h3
-                class="relative z-10 text-white font-serif text-3xl font-bold tracking-widest uppercase border-b-2 border-white pb-1">
-                New In</h3>
-        </div>
-        <!-- Box 2: Bags & Footwear Category Label Overlay -->
-        <div class="relative h-[500px] bg-neutral-200 flex items-center justify-center overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=700"
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
-            <h3
-                class="relative z-10 text-white font-serif text-3xl font-bold tracking-widest uppercase border-b-2 border-white pb-1">
-                Shoes & Bags</h3>
-        </div>
-    </section>
-
-    <!-- 8. Editorial Creative Block: Summer Favorites Layout Banner -->
-    <section class="my-16 max-w-7xl mx-auto px-4">
-        <div
-            class="bg-cider-sand rounded-3xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-orange-200/20 shadow-sm">
-            <div class="md:col-span-5 space-y-4">
-                <h2 class="font-serif text-4xl md:text-6xl font-bold text-cider-accentRed tracking-tight">Sümmer
-                    <br><span
-                        class="font-script text-cider-dark tracking-wide normal-case text-4xl md:text-5xl block -mt-1 pl-4">Favorites</span>
-                </h2>
-                <p class="text-xs text-stone-600 max-w-xs font-medium leading-relaxed">Handpicked pieces chosen by our
-                    design laboratory to transition seamlessly from poolside mornings to seaside dinners.</p>
-                <a href="#"
-                    class="inline-block border-b-2 border-cider-dark text-xs font-bold uppercase tracking-wider pb-0.5 hover:text-cider-accentRed hover:border-cider-accentRed transition">Discover
-                    Selection</a>
-            </div>
-            <!-- Flat-lay Image Container -->
-            <div class="md:col-span-7 rounded-2xl overflow-hidden shadow-md bg-white">
-                <img src="https://images.unsplash.com/photo-1506152983158-b4a74a01c721?auto=format&fit=crop&q=80&w=800"
-                    alt="Summer essentials flatlay" class="w-full h-64 md:h-80 object-cover">
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. Product Inspiration Dual Grid Block (Sands & Baskets) -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto px-4 mb-16">
-        <div class="space-y-3">
-            <div class="h-96 bg-stone-50 rounded-2xl overflow-hidden border border-gray-100">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=600"
-                    class="w-full h-full object-cover">
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase block">Fine Jewelry Accents</span>
-        </div>
-        <div class="space-y-3">
-            <div class="h-96 bg-stone-50 rounded-2xl overflow-hidden border border-gray-100">
-                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&q=80&w=600"
-                    class="w-full h-full object-cover">
-            </div>
-            <span class="text-xs font-bold tracking-wider uppercase block">Woven Basket Totes</span>
-        </div>
-    </section>
-
-    <!-- 10. Editorial Concept Lookbook: Pied à Terre Accent Row -->
-    <section
-        class="w-full bg-stone-900 text-white mb-16 relative overflow-hidden h-[500px] flex items-center justify-center">
-        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200"
-            alt="Coastal Roadscape" class="absolute inset-0 w-full h-full object-cover opacity-60">
-        <div class="absolute inset-0 bg-gradient-to-r from-stone-950/80 via-transparent to-stone-950/80"></div>
-
-        <div class="relative z-10 text-center space-y-4 px-4 max-w-xl">
-            <h2 class="font-serif italic text-4xl md:text-6xl text-amber-100 drop-shadow">Pied à Terre</h2>
-            <p class="text-xs uppercase tracking-widest font-semibold text-stone-200">Mediterranean Riviera Collections
-            </p>
-            <div class="pt-2">
-                <a href="#"
-                    class="bg-white text-stone-900 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-amber-100 transition shadow">Explore
-                    Capsule</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 11. Lifestyle Closeups Snapshot Grid -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto px-4 mb-24">
-        <div class="h-[500px] bg-neutral-100 rounded-xl overflow-hidden"><img
-                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=600"
-                class="w-full h-full object-cover"></div>
-        <div class="h-[500px] bg-neutral-100 rounded-xl overflow-hidden"><img
-                src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=600"
-                class="w-full h-full object-cover"></div>
-    </section>
-
-    <!-- 12. E-Commerce Structured Footer -->
-    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-            <div>
-                <h4 class="text-xs font-bold uppercase tracking-widest mb-4">Shop</h4>
-                <ul class="text-xs text-stone-600 space-y-2.5">
-                    <li><a href="#" class="hover:text-cider-accentRed">All Clothing</a></li>
-                    <li><a href="#" class="hover:text-cider-accentRed">Dresses</a></li>
-                    <li><a href="#" class="hover:text-cider-accentRed">Tops</a></li>
-                    <li><a href="#" class="hover:text-cider-accentRed">Sale</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xs font-bold uppercase tracking-widest mb-4">Support</h4>
-                <ul class="text-xs text-stone-600 space-y-2.5">
-                    <li><a href="#" class="hover:text-cider-accentRed">Shipping Details</a></li>
-                    <li><a href="#" class="hover:text-cider-accentRed">Returns Policy</a></li>
-                    <li><a href="#" class="hover:text-cider-accentRed">Order Lookup</a></li>
-                    <li><a href="#" class="hover:text-cider-accentRed">FAQs</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xs font-bold uppercase tracking-widest mb-4">Company</h4>
-                <ul class="text-xs text-stone-600 space-y-2.5">
-                    <li><a href="#" class="hover:text-cider-accentRed">About Cider</a></li>
-                    <li><a href="#" class="hover:text-cider-accentRed">Sustainability Matrix</a></li>
-                    <li><a href="#" class="hover:text-cider-accentRed">Affiliate Portal</a></li>
-                </ul>
-            </div>
-            <div class="col-span-2 space-y-4">
-                <h4 class="text-xs font-bold uppercase tracking-widest">Join the Cider Club</h4>
-                <p class="text-xs text-stone-500 leading-relaxed">Subscribe to get early campaign drops, limited
-                    vouchers, and style updates delivered straight to your inbox.</p>
-                <form class="flex gap-2 max-w-sm">
-                    <input type="email" placeholder="Your email address"
-                        class="w-full bg-stone-50 border border-stone-200 px-4 py-2 text-xs focus:outline-none focus:border-cider-dark rounded">
-                    <button
-                        class="bg-cider-dark text-white font-bold uppercase tracking-wider text-[11px] px-4 py-2 hover:bg-stone-800 transition rounded">Join</button>
-                </form>
-            </div>
-        </div>
-
-        <div
-            class="max-w-7xl mx-auto px-4 pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-            <p>© 2026 Cider. All Rights Reserved.</p>
-            <div class="flex gap-4 text-[14px]">
-                <span class="grayscale opacity-60">Visa</span>
-                <span class="grayscale opacity-60">Mastercard</span>
-                <span class="grayscale opacity-60">Paypal</span>
-                <span class="grayscale opacity-60">Apple Pay</span>
+                class="border-t border-neutral-100 pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] text-brand-muted tracking-widest uppercase font-light space-y-4 sm:space-y-0">
+                <p>&copy; 2026 WANNI FUGA. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-brand-dark">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-dark">Terms of Use</a>
+                </div>
             </div>
         </div>
     </footer>
 
-
-    <script src="./js/script.js"></script>
 </body>
 
 </html>

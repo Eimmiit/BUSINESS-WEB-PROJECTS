@@ -1,3 +1,10 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 @font-face {
   font-family: "ClashDisplay";
   src: url("../fonts/ClashDisplay-Regular.otf");
@@ -20,8 +27,14 @@
 
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+::-webkit-scrollbar {
+  width: 6px;
+}
 
+::-webkit-scrollbar-track {
+  background: #FCFBFA;
+}
 
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+}

@@ -5,13 +5,11 @@ export default {
     extend: {
       colors: {
         brand: {
-          greendeep: "#0D3B2E",
-          greenlight: "#1E5A47",
-          golddeep: "#C6A04D",
-          goldlight: "#D8B76A",
-          cream: "#F8F6F1",
-          dark: "#111111",
-          white: "#FFFFFF",
+          black: '#111111',
+          white: '#FFFFFF',
+          gold: '#C8A165',
+          champagne: '#EADCC8',
+          warm_gray: '#F5F2EE',
         }
       },
       fontFamily: {
