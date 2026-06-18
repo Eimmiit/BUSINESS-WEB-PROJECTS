@@ -415,93 +415,98 @@
 
 
     <section class="reveal bg-brand-white py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto px-6">
             <!-- Header -->
             <div class="text-center mb-16">
-                <p class="text-brand-gold uppercase tracking-[0.35em] text-[11px] font-inter mb-4">
+                <p class="text-brand-gold uppercase tracking-[0.35em] text-[11px] mb-4">
                     Client Stories
                 </p>
                 <h2 class="font-clashmedium text-4xl md:text-5xl text-brand-black">
                     What Our Clients Say
                 </h2>
-                <div class="w-16 h-px line-reveal bg-brand-gold mx-auto mt-6"></div>
+                <div class="w-16 h-px bg-brand-gold mx-auto mt-6"></div>
             </div>
-            <!-- Testimonials Grid -->
-            <div class="grid md:grid-cols-3 gap-10">
-                <!-- Testimonial 1 -->
-                <div class="feat-premium p-8 group duration-300">
-                    <div class="mb-6">
-                        <div class="flex items-center gap-2 text-brand-gold text-sm">
-                            ★ ★ ★ ★ ★
+            <!-- Slider -->
+            <div class="relative overflow-hidden">
+                <div id="testimonialSlider" class="flex transition-transform duration-700 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full text-center">
+                        <div class="text-brand-gold text-xl mb-8">
+                            ★★★★★
+                        </div>
+                        <blockquote class="font-clashmedium text-2xl md:text-4xl leading-relaxed text-brand-black">
+                            “Cyma didn’t just design my outfit,
+                            they understood my vision completely.”
+                        </blockquote>
+                        <div class="mt-10">
+                            <h4 class="uppercase tracking-[0.2em] text-sm">
+                                Amina K.
+                            </h4>
+                            <p class="text-brand-black/60 text-xs mt-2">
+                                Bridal Client · Lagos Wedding
+                            </p>
                         </div>
                     </div>
-                    <p class="text-brand-black/70 font-inter text-sm leading-relaxed mb-8">
-                        “Cyma didn’t just design my outfit they understood my vision completely.
-                        I felt like royalty at my wedding. Every detail was intentional.”
-                    </p>
-                    <div class="border-t border-brand-champagne pt-6">
-                        <h4 class="font-clashmedium text-brand-black text-sm tracking-[0.15em] uppercase">
-                            Amina K.
-                        </h4>
-                        <p class="text-xs text-brand-black/60 mt-1">
-                            Bridal Client · Lagos Wedding
-                        </p>
-                    </div>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="feat-premium p-8 group duration-300">
-                    <div class="mb-6">
-                        <div class="flex items-center gap-2 text-brand-gold text-sm">
-                            ★ ★ ★ ★ ★
+                    <!-- Slide 2 -->
+                    <div class="min-w-full text-center">
+                        <div class="text-brand-gold text-xl mb-8">
+                            ★★★★★
+                        </div>
+                        <blockquote class="font-clashmedium text-2xl md:text-4xl leading-relaxed text-brand-black">
+                            “The fit, the fabric, the finish.
+                            Everything felt made exclusively for me.”
+                        </blockquote>
+                        <div class="mt-10">
+                            <h4 class="uppercase tracking-[0.2em] text-sm">
+                                Zainab M.
+                            </h4>
+                            <p class="text-brand-black/60 text-xs mt-2">
+                                Couture Client · Photoshoot
+                            </p>
                         </div>
                     </div>
-                    <p class="text-brand-black/70 font-inter text-sm leading-relaxed mb-8">
-                        “The fit, the fabric, the finish everything felt like it was made
-                        exclusively for me. Cyma has redefined luxury for me.”
-                    </p>
-                    <div class="border-t border-brand-champagne pt-6">
-                        <h4 class="font-clashmedium text-brand-black text-sm tracking-[0.15em] uppercase">
-                            Zainab M.
-                        </h4>
-                        <p class="text-xs text-brand-black/60 mt-1">
-                            Couture Client · Photoshoot
-                        </p>
-                    </div>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="feat-premium p-8 group duration-300">
-                    <div class="mb-6">
-                        <div class="flex items-center gap-2 text-brand-gold text-sm">
-                            ★ ★ ★ ★ ★
+                    <!-- Slide 3 -->
+                    <div class="min-w-full text-center">
+                        <div class="text-brand-gold text-xl mb-8">
+                            ★★★★★
                         </div>
-                    </div>
-                    <p class="text-brand-black/70 font-inter text-sm leading-relaxed mb-8">
-                        “I’ve never felt so confident in an outfit before.
-                        Cyma understands elegance in a way that feels personal and powerful.”
-                    </p>
-                    <div class="border-t border-brand-champagne pt-6">
-                        <h4 class="font-clashmedium text-brand-black text-sm tracking-[0.15em] uppercase">
-                            Hauwa S.
-                        </h4>
-                        <p class="text-xs text-brand-black/60 mt-1">
-                            Event Guest · Luxury Gala
-                        </p>
+                        <blockquote class="font-clashmedium text-2xl md:text-4xl leading-relaxed text-brand-black">
+                            “Cyma understands elegance in a way
+                            that feels personal and powerful.”
+                        </blockquote>
+                        <div class="mt-10">
+                            <h4 class="uppercase tracking-[0.2em] text-sm">
+                                Hauwa S.
+                            </h4>
+                            <p class="text-brand-black/60 text-xs mt-2">
+                                Event Guest · Luxury Gala
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- CTA -->
-            <div class="text-center mt-16 ">
-                <a href="#"
-                    class="inline-flex items-center bg-brand-black  text-brand-white px-10 py-4 uppercase tracking-[0.2em] text-xs font-inter btn-luxury hover:text-brand-white transition">
-                    Book Your Consultation
-                </a>
+            <!-- Controls -->
+            <div class="flex justify-center items-center gap-8 mt-16">
+                <button id="prevTestimonial"
+                    class="w-12 h-12 border border-brand-gold rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-white transition">
+                    ←
+                </button>
+                <div id="testimonialDots" class="flex gap-3">
+                    <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+                    <span class="w-2 h-2 rounded-full bg-brand-black/20"></span>
+                    <span class="w-2 h-2 rounded-full bg-brand-black/20"></span>
+                </div>
+                <button id="nextTestimonial"
+                    class="w-12 h-12 border border-brand-gold rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-white transition">
+                    →
+                </button>
             </div>
         </div>
     </section>
 
     <section class="reveal relative w-full h-[70vh] overflow-hidden group">
         <!-- Background Image -->
-        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1800&q=80"
+        <img src="./images/herodress"
             alt="Cyma Signature Collection"
             class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105">
         <!-- Overlay -->
@@ -601,63 +606,100 @@
 
 
 
-    <section class="reveal border-y border-brand-champagne/30 bg-brand-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-                <!-- Service 1 -->
-                <div class="space-y-4">
-                    <div
-                        class="w-12 h-12 mx-auto rounded-full border border-brand-gold flex items-center justify-center">
-                        <span class="text-brand-gold text-lg">
-                            ✦
-                        </span>
+    <section class="reveal border-y border-brand-champagne/30 bg-brand-white py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Luxury Interactive Features Grid Matrix -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Service Block 1: Worldwide Delivery -->
+            <div class="group relative flex flex-col justify-between p-8 border border-gray-50 hover:border-brand-gold/20 bg-transparent rounded-sm hover:shadow-xl hover:shadow-neutral-900/[0.02] transition-all duration-500 ease-out text-center">
+                <div class="space-y-5">
+                    <!-- Premium Micro-Animated Icon Container -->
+                    <div class="w-14 h-14 mx-auto rounded-full border border-brand-gold/40 flex items-center justify-center transition-all duration-500 group-hover:bg-brand-gold group-hover:border-brand-gold text-brand-gold group-hover:text-white">
+                        <!-- Custom Global Logistics SVG Icon -->
+                        <svg class="w-5 h-5 transition-transform duration-500 group-hover:rotate-12" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 2 12 2m0 19c-2.485 0-4.5-4.03-4.5-9S9.515 2 12 2m0 0a9.004 9.004 0 018.716 6.747M12 2a9.004 9.004 0 00-8.716 6.747M21.75 12c0 5.385-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12 6.615 2.25 12 2.25s9.75 4.365 9.75 9.75z" />
+                        </svg>
                     </div>
-                    <h4 class="text-xs tracking-[0.25em] uppercase font-clashmedium text-brand-black">
+                    
+                    <h4 class="text-xs tracking-[0.25em] uppercase font-clashmedium text-brand-black transition-colors duration-300 group-hover:text-brand-gold">
                         Worldwide Delivery
                     </h4>
+                    
                     <p class="text-sm text-brand-black/60 max-w-xs mx-auto font-inter leading-relaxed">
-                        Secure worldwide shipping with trusted logistics partners, ensuring every piece arrives
-                        beautifully and safely.
+                        Secure global shipping with premium tracking networks, ensuring your tailored investments arrive beautifully packaged.
                     </p>
                 </div>
-                <!-- Service 2 -->
-                <div class="space-y-4">
-                    <div
-                        class="w-12 h-12 mx-auto rounded-full border border-brand-gold flex items-center justify-center">
-                        <span class="text-brand-gold text-lg">
-                            ✦
-                        </span>
-                    </div>
-                    <h4 class="text-xs tracking-[0.25em] uppercase font-clashmedium text-brand-black">
-                        Bespoke Tailoring
-                    </h4>
-                    <p class="text-sm text-brand-black/60 max-w-xs mx-auto font-inter leading-relaxed">
-                        Every design can be refined and tailored to your unique measurements and personal style.
-                    </p>
-                </div>
-                <!-- Service 3 -->
-                <div class="space-y-4">
-                    <div
-                        class="w-12 h-12 mx-auto rounded-full border border-brand-gold flex items-center justify-center">
-                        <span class="text-brand-gold text-lg">
-                            ✦
-                        </span>
-                    </div>
-                    <h4 class="text-xs tracking-[0.25em] uppercase font-clashmedium text-brand-black">
-                        Private Consultations
-                    </h4>
-                    <p class="text-sm text-brand-black/60 max-w-xs mx-auto font-inter leading-relaxed">
-                        Schedule one-on-one consultations for bridal, bespoke, and special occasion collections.
-                    </p>
+                
+                <!-- Premium Contextual Call-To-Action Link -->
+                <div class="mt-8">
+                    <a href="#" class="inline-block text-[10px] tracking-[0.2em] uppercase font-inter text-brand-black/40 group-hover:text-brand-gold transition-colors duration-300 border-b border-transparent group-hover:border-brand-gold/30 pb-1">
+                        Shipping Terms →
+                    </a>
                 </div>
             </div>
+
+            <!-- Service Block 2: Bespoke Tailoring -->
+            <div class="group relative flex flex-col justify-between p-8 border border-gray-50 hover:border-brand-gold/20 bg-transparent rounded-sm hover:shadow-xl hover:shadow-neutral-900/[0.02] transition-all duration-500 ease-out text-center">
+                <div class="space-y-5">
+                    <div class="w-14 h-14 mx-auto rounded-full border border-brand-gold/40 flex items-center justify-center transition-all duration-500 group-hover:bg-brand-gold group-hover:border-brand-gold text-brand-gold group-hover:text-white">
+                        <!-- Custom Tailoring / Measurement SVG Icon -->
+                        <svg class="w-5 h-5 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    
+                    <h4 class="text-xs tracking-[0.25em] uppercase font-clashmedium text-brand-black transition-colors duration-300 group-hover:text-brand-gold">
+                        Bespoke Tailoring
+                    </h4>
+                    
+                    <p class="text-sm text-brand-black/60 max-w-xs mx-auto font-inter leading-relaxed">
+                        Every masterpiece can be explicitly recut and adapted to match your exact measurements and distinct silhouette.
+                    </p>
+                </div>
+                
+                <div class="mt-8">
+                    <a href="#" class="inline-block text-[10px] tracking-[0.2em] uppercase font-inter text-brand-black/40 group-hover:text-brand-gold transition-colors duration-300 border-b border-transparent group-hover:border-brand-gold/30 pb-1">
+                        Sizing Guide →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Block 3: Private Consultations -->
+            <div class="group relative flex flex-col justify-between p-8 border border-gray-50 hover:border-brand-gold/20 bg-transparent rounded-sm hover:shadow-xl hover:shadow-neutral-900/[0.02] transition-all duration-500 ease-out text-center">
+                <div class="space-y-5">
+                    <div class="w-14 h-14 mx-auto rounded-full border border-brand-gold/40 flex items-center justify-center transition-all duration-500 group-hover:bg-brand-gold group-hover:border-brand-gold text-brand-gold group-hover:text-white">
+                        <!-- Custom Calendar Consultation SVG Icon -->
+                        <svg class="w-5 h-5 transition-transform duration-500 group-hover:-rotate-6" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zM14.25 15h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zM16.5 15h.008v.008H16.5V15zm0 2.25h.008v.008H16.5v-.008z" />
+                        </svg>
+                    </div>
+                    
+                    <h4 class="text-xs tracking-[0.25em] uppercase font-clashmedium text-brand-black transition-colors duration-300 group-hover:text-brand-gold">
+                        Private Atelier
+                    </h4>
+                    
+                    <p class="text-sm text-brand-black/60 max-w-xs mx-auto font-inter leading-relaxed">
+                        Secure a dedicated digital or physical private styling room context for bridal and luxury gala designs.
+                    </p>
+                </div>
+                
+                <div class="mt-8">
+                    <a href="#" class="inline-block text-[10px] tracking-[0.2em] uppercase font-inter text-brand-black/40 group-hover:text-brand-gold transition-colors duration-300 border-b border-transparent group-hover:border-brand-gold/30 pb-1">
+                        Book Fitting →
+                    </a>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
 
     <section class="reveal relative py-32 overflow-hidden">
         <!-- Background Image -->
-        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=80"
+        <img src="./images/herodress"
             alt="Cyma Consultation" class="absolute inset-0 w-full h-full object-cover">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/70">
@@ -695,93 +737,115 @@
         </div>
     </section>
 
-    <section class="reveal bg-brand-white py-24">
+    <section class="reveal bg-brand-white py-24 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Header -->
+            <!-- Premium Section Header -->
             <div class="text-center mb-16">
                 <p class="text-brand-gold uppercase tracking-[0.35em] text-[11px] font-inter mb-4">
                     Follow Our Journey
                 </p>
-                <h2 class="font-clashmedium text-4xl md:text-5xl text-brand-black">
+                <!-- Made the handle a clickable luxury link directly -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                    class="inline-block font-clashmedium text-4xl md:text-5xl text-brand-black hover:text-brand-gold transition-colors duration-300 tracking-wide">
                     @CYMA
-                </h2>
-                <p class="mt-6 max-w-2xl mx-auto text-brand-black/60 font-inter leading-relaxed">
+                </a>
+                <p class="mt-6 max-w-2xl mx-auto text-brand-black/60 font-inter text-sm leading-relaxed">
                     Discover behind-the-scenes moments, client transformations,
                     new collections, fittings, runway showcases, and the stories
                     that inspire every Cyma creation.
                 </p>
-                <div class="w-16 h-px line-reveal bg-brand-gold mx-auto mt-8">
+                <div class="w-16 h-px line-reveal bg-brand-gold mx-auto mt-8"></div>
+            </div>
+            <!-- Luxury Interactive Gallery Wall -->
+            <!-- Luxury Infinite Instagram Gallery -->
+            <div class="overflow-hidden relative mt-16">
+                <div class="instagram-track flex gap-4 w-max">
+                    <!-- Set 1 -->
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center">
+                            <span class="text-white uppercase tracking-[0.25em] text-[10px]">View Post</span>
+                            <span class="text-white/70 text-[11px] mt-2">♥ 842</span>
+                        </div>
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center">
+                            <span class="text-white uppercase tracking-[0.25em] text-[10px]">View Post</span>
+                            <span class="text-white/70 text-[11px] mt-2">♥ 1.2k</span>
+                        </div>
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center">
+                            <span class="text-white uppercase tracking-[0.25em] text-[10px]">View Post</span>
+                            <span class="text-white/70 text-[11px] mt-2">♥ 954</span>
+                        </div>
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center">
+                            <span class="text-white uppercase tracking-[0.25em] text-[10px]">View Post</span>
+                            <span class="text-white/70 text-[11px] mt-2">♥ 1.5k</span>
+                        </div>
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center">
+                            <span class="text-white uppercase tracking-[0.25em] text-[10px]">View Post</span>
+                            <span class="text-white/70 text-[11px] mt-2">♥ 712</span>
+                        </div>
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center">
+                            <span class="text-white uppercase tracking-[0.25em] text-[10px]">View Post</span>
+                            <span class="text-white/70 text-[11px] mt-2">♥ 2.1k</span>
+                        </div>
+                    </a>
+                    <!-- Duplicate everything again -->
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                    </a>
+                    <a href="#" class="instagram-card group relative overflow-hidden aspect-square w-[220px] shrink-0">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover object-top">
+                    </a>
                 </div>
             </div>
-            <!-- Gallery -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <!-- Image 1 -->
-                <a href="#" class="group relative overflow-hidden aspect-square">
-                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"
-                        alt="Cyma Instagram Post"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="text-white text-lg">
-                            +
-                        </span>
-                    </div>
-                </a>
-                <!-- Image 2 -->
-                <a href="#" class="group relative overflow-hidden aspect-square">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
-                        alt="Cyma Instagram Post"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="text-white text-lg">+</span>
-                    </div>
-                </a>
-                <!-- Image 3 -->
-                <a href="#" class="group relative overflow-hidden aspect-square">
-                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
-                        alt="Cyma Instagram Post"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="text-white text-lg">+</span>
-                    </div>
-                </a>
-                <!-- Image 4 -->
-                <a href="#" class="group relative overflow-hidden aspect-square">
-                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80"
-                        alt="Cyma Instagram Post"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="text-white text-lg">+</span>
-                    </div>
-                </a>
-                <!-- Image 5 -->
-                <a href="#" class="group relative overflow-hidden aspect-square">
-                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80"
-                        alt="Cyma Instagram Post"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="text-white text-lg">+</span>
-                    </div>
-                </a>
-                <!-- Image 6 -->
-                <a href="#" class="group relative overflow-hidden aspect-square">
-                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80"
-                        alt="Cyma Instagram Post"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                        <span class="text-white text-lg">+</span>
-                    </div>
-                </a>
-            </div>
-            <!-- Instagram CTA -->
-            <div class="text-center mt-12">
-                <a href="#"
-                    class="inline-flex items-center border border-brand-black text-brand-black px-8 py-4 uppercase tracking-[0.25em] text-xs font-inter btn-luxury hover:text-brand-white transition">
+            <!-- Refined Magnetic Call to Action Button -->
+            <div class="text-center mt-14">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                    class="inline-block border border-brand-black text-brand-black bg-transparent px-10 py-4 uppercase tracking-[0.25em] text-xs font-inter transition-all duration-300 hover:bg-brand-black hover:text-white hover:-translate-y-0.5 shadow-sm hover:shadow-md">
                     Follow On Instagram
                 </a>
             </div>

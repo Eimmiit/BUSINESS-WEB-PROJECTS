@@ -241,3 +241,59 @@
   opacity: 1;
   transform: scale(1);
 }
+
+
+
+.instagram-track {
+  animation: instagramScroll 35s linear infinite;
+}
+
+.instagram-track:hover {
+  animation-play-state: paused;
+}
+
+.instagram-card img {
+  transition:
+    transform 1s cubic-bezier(.16, 1, .3, 1),
+    filter 1s ease;
+}
+
+.instagram-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(.9);
+}
+
+@keyframes instagramScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-220px * 6 - 1rem * 6));
+  }
+}
+
+.instagram-card {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.instagram-track {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+
