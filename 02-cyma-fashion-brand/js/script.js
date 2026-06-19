@@ -58,6 +58,20 @@ if (menuBtn && closeMenu && mobileMenu && mobileOverlay) {
 
 
 function toggleMobileMenu() {
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+    mobileMenu.classList.toggle("-translate-x-full");
+}
+function toggleCollectionDropdown() {
+    const dropdown =
+        document.getElementById("collectionDropdown");
+    const arrow =
+        document.getElementById("collectionArrow");
+    dropdown.classList.toggle("hidden");
+    arrow.classList.toggle("rotate-180");
+}
+
+function toggleMobileMenu() {
   const menuDrawer = document.getElementById('mobileMenu');
   const isClosed = menuDrawer.classList.contains('-translate-x-full');
 
