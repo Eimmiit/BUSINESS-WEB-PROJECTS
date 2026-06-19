@@ -1935,11 +1935,6 @@ video {
   border-color: rgb(200 161 101 / 0.2);
 }
 
-.hover\:bg-brand-black:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-brand-gold:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(200 161 101 / var(--tw-bg-opacity, 1));
